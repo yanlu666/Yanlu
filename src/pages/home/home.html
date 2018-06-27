@@ -1,0 +1,56 @@
+<ion-content class="home-content" padding>
+
+  <div class="home-header-iconbox">
+    <ion-buttons>
+      <button class="home-header-icon" ion-button icon-only color="royal" (click)="pushPage()">
+        <ion-icon class="home-header-icon" name="md-calendar"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons>
+      <button class="home-header-icon" ion-button icon-only color="royal" (click)="pushMinePage()">
+        <ion-icon class="home-header-icon" name="person-add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </div>
+
+  <div class="home-resttime">
+    <p>距考研还有</p>
+    <p><span class="home-resttime-day" id="t_d">238</span>天
+        <span id="t_h"></span>时
+        <span id="t_m"></span>分
+        <span id="t_s"></span>秒
+    </p>
+    
+  </div>
+
+  <ion-list class="home-content-list-opacity">
+    <ion-item-sliding *ngFor="let item of todoList;let i=index" class="home-content-item">
+      <ion-item >
+        <ion-icon class="home-content-item-clock" name="md-alarm"></ion-icon>
+        <span class="home-content-item-time">{{item.time.start}}-{{item.time.end}}</span>
+        <span>{{item.desc}}</span>
+      </ion-item>
+      <ion-item-options side="right">
+        <!-- <button (click)="homeContentItemCom(i)" ion-button class="home-content-item-option-bg-blue">
+          <ion-icon class="home-content-item-option-color" name="ios-checkmark-circle-outline"></ion-icon>
+          完成
+        </button> -->
+        <button (click)="homeContentItemDelete(item,i)" ion-button class="home-content-item-option-bg-color">
+          <ion-icon class="home-content-item-option-color" name="ios-trash-outline"></ion-icon>
+          删除
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab class="home-fab" right bottom>
+      <button ion-fab color="light"><ion-icon name="ios-arrow-up-outline"></ion-icon></button>
+      <ion-fab-list side="top">
+        <button ion-fab><ion-icon name="logo-snapchat"></ion-icon></button>
+        <button ion-fab><ion-icon name="ios-shirt"></ion-icon></button>
+      </ion-fab-list>
+  </ion-fab>
+
+  <button class="home-create" (click)="pushCreatePage()" ion-fab color="light"><ion-icon name="md-create"></ion-icon></button>
+
+</ion-content>

@@ -1,0 +1,85 @@
+
+<ion-header>
+
+  <ion-navbar color="lv">
+    <ion-title>资料</ion-title>
+  </ion-navbar>
+
+  <!-- <ion-input class="search" placeholder="搜索"> </ion-input> -->
+  <ion-searchbar  style="background-color:lv" (ionInput)="getItems($event)" id="search" [(ngModel)]='search'></ion-searchbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div style="height:60px;margin-top:5px;">
+    <span  class="aa">学科:</span>
+    <ion-scroll scrollX="true" style="height: 30px;margin-left:45px;">
+      <ul style="width: 1000px;margin-top:-13px;list-style:none;padding:0;">
+        <li><a class="aa bb" *ngFor='let item of cc;let i=index' (click)='xueke(i)'>{{item}}</a></li>
+      </ul>
+    </ion-scroll>
+
+
+
+    <span  class="aa" style="width:40px;">年份:</span>
+    <ion-scroll scrollX="true" style="height: 30px;margin-left:45px;">
+        <ul style="width: 1000px;margin-top:-12px;list-style:none;padding:0;">
+          <li><a class="aa cc" *ngFor='let item of nn;let i=index' (click)='nian(i)'>{{item}}</a></li>
+        </ul>
+      </ion-scroll>
+  </div>
+
+
+
+  <ion-navbar color="danger">
+      <ion-title (click)="gowodeziliao()">团资料</ion-title>
+  </ion-navbar>
+  <ion-list>
+    <ion-item (click)="goTuxiang()">
+      <img src="./assets/imgs/ziliaot/01.jpg" style="width:70px;height:70px;float:left;">
+      <span style="width:55%;float:left; margin-left:10px;" id="hh">2017年英语长难句精准解读</span>
+      <button ion-button color="danger" style="margin-left:5px;margin-top:25px;width:20%;height:40px;">详情</button>
+      <button ion-button color="light" round style="float:left;margin-left:10px;margin-top:-40px;width:180px;"></button>
+      <button ion-button color="danger" round style="float:left;margin-left:10px;margin-top:-40px;width:80px;">45%</button>
+      <h2 style="float:left;margin-left:10px;color:red;" id="pri">￥1.00</h2>
+    </ion-item>
+
+    <ion-item (click)="goTuxiang2()">
+        <img src="./assets/imgs/ziliaot/01.jpg" style="width:70px;height:70px;float:left;">
+        <span style="width:55%;float:left; margin-left:10px;" id="hh2">2017年英语长难句解读</span>
+        <button ion-button color="danger" style="margin-left:5px;margin-top:25px;width:20%;height:40px;">详情</button>
+        <button ion-button color="light" round style="float:left;margin-left:10px;margin-top:-40px;width:180px;"></button>
+        <button ion-button color="danger" round style="float:left;margin-left:10px;margin-top:-40px;width:90px;">50%</button>
+        <h2 style="float:left;margin-left:10px;color:red;" id="pri2">￥3.00</h2>
+      </ion-item>
+
+      <!-- <ion-item (click)="goTuxiang3()">
+          <img src="./assets/imgs/ziliaot/01.jpg" style="width:70px;height:70px;float:left;">
+          <span style="width:55%;float:left; margin-left:10px;" id="hh3">2016年政治考点整合总结</span>
+          <button ion-button color="danger" style="margin-left:5px;margin-top:25px;width:20%;height:40px;">详情</button>
+          <button ion-button color="light" round style="float:left;margin-left:10px;margin-top:-40px;width:180px;"></button>
+          <button ion-button color="danger" round style="float:left;margin-left:10px;margin-top:-40px;width:60px;">30%</button>
+          <h2 style="float:left;margin-left:10px;color:red;" id="pri3">￥6.00</h2>
+        </ion-item> -->
+  </ion-list>
+
+  <ion-navbar color='lv' style="margin-top:-20px;">
+      <ion-title>找资料</ion-title>
+  </ion-navbar>
+  <ion-list id="list">
+    <ion-item (click)="goZixiang(i)"  *ngFor='let item of items;let i=index'>
+      <a class="a1">{{item.ming}}</a>
+    </ion-item>
+  </ion-list>
+
+  <!-- 未找到 -->
+  <div id="no">
+    <img src="./assets/imgs/ziliaot/03.jpg" height="150px" width="100%">
+    <p style="text-align: center;color: gray;">未找到资料，点击进行反馈</p>
+    <button ion-button color='danger'style="width:40%;margin-left:110px;" small (click)="showRadio()">反馈</button>
+
+  </div>
+
+
+</ion-content>

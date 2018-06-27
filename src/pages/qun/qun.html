@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar color="lv">
+    <ion-title>2019北京理工大学考研1群</ion-title>
+  </ion-navbar>
+  <img src="./assets/imgs/00.jpg" height="200px" width="100%">
+</ion-header>
+
+
+<ion-content padding>
+
+  <div style="width:100%;height:90px;">
+    <div style="width:25%;float:left;"   (click)='goGonggao()'>
+      <img src="./assets/imgs/01.png" style="width:50px;margin-left:10px;"><br>
+      <a style="color:black;font-size:15px;margin-left:17px;">公告</a>
+    </div>
+
+    <div style="width:25%;float:left;" (click)="openWords()" >
+        <img src="./assets/imgs/04.png" style="width:50px;margin-left:10px;"><br>
+        <a style="color:black;font-size:15px;margin-left:17px;">文件</a>
+    </div>
+
+    <div style="width:25%;float:left;">
+        <img src="./assets/imgs/03.png" style="width:50px;margin-left:10px;"><br>
+        <a style="color:black;font-size:15px;margin-left:8px;">聊天记录</a>
+    </div>
+
+    <div style="width:25%;float:left;" (click)="presentActionSheet()">
+        <img src="./assets/imgs/02.png" style="width:50px;margin-left:10px;"><br>
+        <a style="color:black;font-size:15px;margin-left:15px;">分享群</a>
+    </div>
+  </div>
+
+  <ion-list>
+    <!-- <ion-item>
+      <span>群消息免打扰</span>
+    </ion-item> -->
+    <ion-item>
+        <ion-label>群消息免打扰</ion-label>
+        <ion-toggle checked="false"></ion-toggle>
+   </ion-item>
+
+    <ion-item (click)="presentActionSheet2()">
+      <span>群消息设置 <a style="color:darkgray;float:right;">只接受不提醒＞</a></span>
+    </ion-item>
+    <ion-item>
+      <span>群成员 <a style="color:darkgray;float:right;">123位成员＞</a></span>
+    </ion-item>
+    <ion-item>
+      <span>群介绍</span>
+    </ion-item>
+  </ion-list>
+  <p>
+    本群创建于2018年5月12日，专门针对2019考研的学生，为大家创建一个可以随时交流、沟通的平台，来方便大家互相学习交流。
+  </p>
+
+  <button ion-button color="danger" style="width:75%;height:30px;margin-left:12%;" (click)="showConfirm()">退出该群</button>
+</ion-content>

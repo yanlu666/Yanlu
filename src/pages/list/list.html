@@ -1,0 +1,51 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar color="lv">
+    <ion-title>联系人</ion-title>
+    <ion-buttons end (click)="openAdd()">
+        <button ion-button icon-only >
+            <ion-icon ios="ios-add" md="md-add" style="color:black;font-size:45px;"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <div padding>
+        <ion-segment [(ngModel)]="pet">
+          <ion-segment-button value="kittens">
+           群
+          </ion-segment-button>
+          <ion-segment-button value="puppies">
+           好友
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+
+      <div [ngSwitch]="pet">
+        <ion-list *ngSwitchCase="'puppies'" >
+              <ion-item (click)="openDelete(i)" *ngFor="let item of data;let i=index">
+                <ion-thumbnail item-start>
+                  <img src={{item.touxiang}}  class="yuan">
+                </ion-thumbnail>
+                <h2>{{item.pusername}}</h2>
+              </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'kittens'">
+          <ion-item (click)="openQun(i)" *ngFor="let item of quns;let i=index">
+            <ion-thumbnail item-start>
+              <img src={{item.touxiang}}>
+            </ion-thumbnail>
+            <h2>{{item.qunname}}</h2>
+          </ion-item>
+        </ion-list>
+      </div>
+</ion-content>

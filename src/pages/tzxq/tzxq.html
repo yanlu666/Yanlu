@@ -1,0 +1,55 @@
+ <ion-header noborder>
+  <ion-navbar color="lv">
+    <ion-title>帖子详情</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+        <!-- 帖子内容 -->
+        <ion-card-content >
+          <ion-card-title>
+              <img  src={{tu}} class="toux"/>
+              {{name}}
+              <span style="float:right; font-size:15px;">{{time}}</span>
+            </ion-card-title>
+          <p>
+            {{content}}
+          </p>
+          <ion-icon name='ios-redo' class="icon" color="lv"></ion-icon>
+          <ion-icon name="ios-text"  color="lan" (click)="pinglun()"></ion-icon>
+          <ion-icon name='ios-heart' class="icon" color="hui" id='zan' (click)="zan()"></ion-icon>
+        </ion-card-content>
+
+        <!-- 评论区 -->
+
+            <ion-card-content style="border-bottom:rgb(160, 158, 142) 1px solid;">
+              <ion-card-title>
+                  <img  src="./assets/imgs/z-01.jpg" class="toux" />
+                  仙女bb
+                  <span style="float:right; font-size:15px;">14:20</span>
+                </ion-card-title>
+              <div>
+               我觉得还行啊。。。
+              </div>
+              <ion-icon name="ios-text-outline"  color="lan" style="margin-top:-15px;"></ion-icon>
+
+            </ion-card-content>
+
+            <ion-item *ngFor="let item of items" style="margin:0; padding:0; border-bottom:0px;">
+              <ion-card-content style="border-bottom:rgb(160, 158, 142) 1px solid; ">
+                <ion-card-title>
+                    <img  src="./assets/imgs/z-02.jpg"  class="toux" />
+                    仙女bb
+                    <span style="float:right; font-size:15px;">14:20</span>
+                  </ion-card-title>
+                  <div>
+                    {{item}}
+                  </div>
+              <ion-icon name="ios-text-outline"  color="lan" style="margin-top:-15px;"></ion-icon>
+              </ion-card-content>
+            </ion-item>
+
+
+
+</ion-content>

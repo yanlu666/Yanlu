@@ -1,0 +1,50 @@
+<!--
+  Generated template for the PersonsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color='lv'>
+    <ion-title >群成员</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  class="outer-content">
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-item *ngFor="let item of results" (click)="goPerson()">
+    <ion-avatar item-start>
+      <img src={{item.src}}>
+    </ion-avatar>
+    <h2>{{item.name}}</h2>
+    <p>{{item.geqian}}</p>
+  </ion-item>
+  <ion-list id="qunzhu">
+    <ion-list-header>
+     群主、管理员
+    </ion-list-header>
+      <ion-item *ngFor="let item of qunzhu" (click)="goPerson()">
+        <ion-avatar item-start>
+          <img src={{item.src}}>
+        </ion-avatar>
+        <h2>{{item.name}}</h2>
+        <p>{{item.geqian}}</p>
+      </ion-item>
+  </ion-list>
+
+  <ion-list id="chengyuan">
+    <ion-list-header>
+      成员
+    </ion-list-header>
+
+      <ion-item *ngFor="let item of persons">
+        <ion-avatar item-start>
+          <img src={{item.src}}>
+        </ion-avatar>
+        <h2>{{item.name}}</h2>
+        <p>{{item.geqian}}</p>
+      </ion-item>
+
+  </ion-list>
+
+</ion-content>

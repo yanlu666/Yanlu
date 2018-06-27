@@ -1,0 +1,34 @@
+ 
+<ion-header> 
+  <ion-navbar color="lv">
+    <ion-title>验证</ion-title>
+  </ion-navbar> 
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item> 
+        <ion-input type="text" placeholder="请输入手机号" [(ngModel)]='phone'></ion-input>
+    </ion-item>
+    
+    <!-- 图片验证码 --> 
+     <ion-item  style="width:240px;">  
+        <ion-input type="text" [(ngModel)]="vcode" placeholder="验证码"  ></ion-input>
+     </ion-item> 
+     <span id="code"  title="看不清，换一张" (click)="changeImg()"  ></span> 
+     <span style="color:red; float:right;" id='yanErr'></span><br/>
+    
+     
+    
+    <ion-item  style="width:240px;"> 
+        <ion-input type="text" placeholder="请输入短信验证码"  [(ngModel)]="message" ></ion-input>
+    </ion-item>
+    <button ion-button  color="lv" id='btn' style="float:right; width:100px; margin-top:-50px; text-align:center;" (click)="getMessage()">短信验证码</button>   
+    <span style="color:red; float:right;" id='mesErr'></span><br/>
+    
+   
+
+    <p style="text-align:center;">
+        <button ion-button  color="lv" style="width:200px; margin:50px auto;"  (click)="goLogin()">下一步</button>   
+     </p>
+</ion-content>

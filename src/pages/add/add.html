@@ -1,0 +1,64 @@
+<!--
+  Generated template for the AddPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="lv">
+    <ion-title>添加</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar placeholder="搜索关键字，如19年北京大学考研"  (ionInput)="search($event)"></ion-searchbar>
+  <ion-list-header >
+    查找结果
+   </ion-list-header>
+   <ion-list>
+     <ion-item *ngFor="let item of results;let i=index">
+       <ion-avatar item-start>
+         <img src={{item.touxiang}}>
+       </ion-avatar>
+       <h2>{{item.username}}</h2>
+       <button ion-button outline item-end (click)="goPerson1(i)">
+        添加
+      </button>
+     </ion-item>
+ </ion-list>
+
+   <ion-list  id="qun">
+      <ion-list-header>
+          热门群聊
+         </ion-list-header>
+     <ion-item *ngFor="let item of qun;let i=index" (click)="goPerson2(i)">
+       <ion-avatar item-start>
+         <img src="./assets/imgs/beili.jpg">
+       </ion-avatar>
+       <h2>{{item}}</h2>
+       <button ion-button outline item-end>
+        加入群聊
+      </button>
+     </ion-item>
+     <p class="change">---不感兴趣？换一批---</p>
+ </ion-list>
+
+ <ion-list  id="person">
+   <ion-list-header>
+     推荐好友
+   </ion-list-header>
+     <ion-item *ngFor="let item of persons;let i=index" (click)="goPerson3(i)">
+       <ion-avatar item-start>
+         <img src={{item.touxiang}}>
+       </ion-avatar>
+       <h2>{{item.username}}</h2>
+       <button ion-button outline item-end>
+        添加
+      </button>
+     </ion-item>
+     <p class="change">---不感兴趣？换一批---</p>
+ </ion-list>
+</ion-content>

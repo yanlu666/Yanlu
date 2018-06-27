@@ -1,0 +1,21 @@
+page-about {
+    .info{
+        height: 240px;
+        text-align: center;
+        padding-top: 30px;
+        border-bottom: 15px solid rgb(243, 242, 242);
+        background:rgb(55, 206, 193);
+    }
+    .touxiang{
+        width: 80px;
+        height: 80px;
+        border-radius: 80px;
+    }
+    .item1 span{
+        color:silver;
+    }
+    .add{
+        background: rgb(55, 206, 193);
+        margin-top:20px;
+    }
+}

@@ -1,0 +1,33 @@
+ 
+<ion-header noborder>
+  <ion-navbar color="lv">
+    <ion-title>写帖子</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content >
+   <textarea rows="20" cols="50" id="ta" [(ngModel)]="content" onfocus="document.getElementById('note').style.display='none'; console.log(value);" onblur="if( value.trim()== ''){document.getElementById('note').style.display='block';   console.log('block');}" style="border:2px solid rgba(217, 221, 212, 0.89); line-height:10px;">
+   </textarea>
+   <div id="note" class="note">
+    <font color="#777" >说点什么吧......</font>
+   </div>
+
+   <ion-list radio-group> 
+    <ion-item>
+      <ion-label>经验贴</ion-label>
+      <ion-radio  value="expirence" id="expirence" checked='true'></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>提问帖</ion-label>
+      <ion-radio value="question" id="question" ></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>其他贴</ion-label>
+      <ion-radio value="other" id="other"  ></ion-radio>
+    </ion-item>
+  </ion-list>
+
+   <button ion-button color="lv" style="float:right; margin-right:10px;" (click)="fabu()" id="fabu">发布</button>
+</ion-content>

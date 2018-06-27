@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar color="lv">
+    <ion-title class="mine-title">我的</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="pushSettingPage()">
+        <ion-icon class="mine-header-icon" name="ios-settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="mine-bg">
+    <img src={{touxiang}} class="mine-bg-tximg" alt="">
+    <p class="mine-bg-p" id="username" >{{username}}</p>
+    <p class="mine-bg-p">{{qianming}}</p>
+  </div>
+
+  <div>
+    <ion-item>
+      <ion-icon name="md-podium" item-start></ion-icon>
+        我的等级
+      <ion-badge item-end>Lv10</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="ios-card" item-start></ion-icon>
+        我的K币
+      <ion-badge item-end>1000</ion-badge>
+    </ion-item>
+    <ion-item id='ziliao'>
+      <ion-icon name="ios-folder-open" item-start></ion-icon>
+        我的资料
+    </ion-item>
+    <ion-item  id='wdtz'>
+      <ion-icon name="ios-paper" item-start></ion-icon>
+        我的帖子
+    </ion-item>
+  </div>
+</ion-content>

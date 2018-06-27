@@ -1,0 +1,29 @@
+
+.content,.scroll-content{
+  width:100%;
+  padding:0 !important;
+}
+div.scroll-content{
+  padding-top:0 !important;
+}
+.mine-bg{
+  width:100%;
+  height:200px;
+  background-color:rgb(55,206,193);
+  padding-top: 20px;
+}
+
+.mine-header-icon{
+  color:black;
+}
+.mine-bg-tximg{
+  width:80px;
+  height:80px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px black;
+  display: block;
+  margin:0 auto;
+}
+.mine-bg-p{
+  text-align: center;
+}

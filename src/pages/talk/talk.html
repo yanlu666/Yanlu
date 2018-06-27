@@ -1,0 +1,39 @@
+<!--
+  Generated template for the TalkPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="lv">
+    <ion-title>{{data.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content  style="background:#eeeeee;">
+    <!-- <div class="message">
+      <img src={{data.src}}  style="margin-left:10px;">
+      <div class="comment1"  style="margin-top:-50px;margin-left:80px;">{{data.talk}}</div>
+    </div>
+  <div class="message">
+    <div class="comment" style="margin-top:-20px;">学姐，你当年考试专业课难吗？</div>
+    <img src="./assets/imgs/daxue.jpg">
+  </div>
+  <div class="foot">
+    <img src="./assets/imgs/smile.png" (click)="openHistory()">
+    <img src="./assets/imgs/smile.png">
+    <input type="text" placeholder="输入聊天内容" style="width:65%;border:none;" id="text" (ionInput)="msg($event)">
+    <input type="button" value="发送" (click)="send()">
+  </div> -->
+  <ul class="content">
+    <!-- 欢迎加入qq群：454796847、135430763 -->
+    <li><img src="./assets/imgs/my.jpg" class="imgleft"><span class="spanleft">你当年考试专业课难吗？</span></li>
+   </ul>
+   <div id="face" style="width:100%;border:none;display:none"></div>
+  <div class="foot">
+        <img src="./assets/imgs/smile.png"  (click)="emoji()">
+       <input id="text" type="text" value="1" placeholder="输入聊天内容" [(ngModel)]="message" style="width:70%;border:none;" name="note" contenteditable="true">
+       <button id="btn" (click)="send()" class="btn">发送</button>
+  </div>
+</ion-content>

@@ -1,0 +1,59 @@
+.yanxun-title{
+  background-color: rgb(55,206,193);
+}
+.toolbar-title{
+  color:white;
+}
+.yanxun-slides{
+  height:2em;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+}
+.yanxun-slide{
+  width: 5em !important;
+  text-align: center;
+}
+.yanxun-slide-a{
+  color:black;
+}
+.yanxun-slide span{
+  display:inline-block;
+}
+.yanxun-card{
+  margin: 0 0 !important;
+  border-bottom: 1px solid #ccc;
+  min-height: 100px;
+  position: relative;
+}
+.yanxin-card-img{
+  padding:0 16px;
+}
+.yunlu-slide-active{
+  color:#488aff;
+}
+.yanxun-more{
+  background-color: white;
+  color: tomato;
+  float: right;
+}
+.yanxun-item-time{
+  float:right;
+  color:#777;
+}
+.yanxun-item-name{
+  float:left;
+  color:#777;
+}
+.yanxun-content{
+  background-color: #777;
+}
+.yanxun-card-content{
+  padding:20px;
+}
+.yanxun-card-bottom-box{
+  width:90%;
+}
+.card-content-left{
+  float:left;
+  width:70%;
+}

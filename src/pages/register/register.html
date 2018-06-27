@@ -1,0 +1,49 @@
+ 
+<ion-header> 
+  <ion-navbar  color="lv">
+    <ion-title>注册</ion-title>
+  </ion-navbar> 
+</ion-header> 
+
+<ion-content padding>
+      <ion-item>
+        <ion-label>用户名：</ion-label>
+        <ion-input type="text" [(ngModel)]="uname"></ion-input>
+      </ion-item>
+      <span style="color:red" id='nameErr'></span><br/>  
+
+      <ion-item>
+          <ion-label>性别：</ion-label>
+          <ion-select [(ngModel)]="xingbie">
+            <ion-option value="male">女</ion-option>
+            <ion-option value="female">男</ion-option> 
+          </ion-select>
+      </ion-item>
+      <span style="color:red" id='sexErr'></span><br/>  
+      
+      <ion-item>
+          <ion-label>手机号：</ion-label>
+          <ion-input type="number" [(ngModel)]="phone"></ion-input>
+      </ion-item> 
+      <span style="color:red" id='phoneErr'></span><br/> 
+    
+      <ion-item>
+          <ion-label>密码：</ion-label>
+          <ion-input type="password" [(ngModel)]="psw1"></ion-input>
+      </ion-item>
+      <span style="color:red" id='psw1Err'></span><br/>  
+ 
+      <ion-item>
+          <ion-label>确认密码：</ion-label>
+          <ion-input type="password" [(ngModel)]="psw2"></ion-input>
+      </ion-item>
+      <span style="color:red" id='psw2Err'></span><br/>  
+     
+       <p style="text-align:center;">学生证</p>
+       <p><ion-icon ios="ios-camera" md="md-camera" style="font-size:50px;  margin-right:150px;"  ></ion-icon></p>
+       
+       <p style="text-align:center;">  
+          <button ion-button  color="lv" style="width:200px; margin:50px auto;"  id="reg" >注　　册</button>   
+       </p>
+ 
+</ion-content>

@@ -1,0 +1,29 @@
+<!--
+  Generated template for the YanxunNewsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="lv">
+    <ion-title>研讯</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card class="yanxun-card">
+
+    <ion-item>
+      <h3 class="yanxun-card-title">{{articleD.title}}</h3>
+      <span class="yanxun-card-span sa">{{articleD.time}}</span>
+      <span class="yanxun-card-span sb">{{articleD.from}}</span>
+    </ion-item>
+
+    <ion-card-content>
+      <p *ngFor="let item of articleD.source" class="yanxun-card-p">{{item}}</p>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

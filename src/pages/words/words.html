@@ -1,0 +1,27 @@
+<!--
+  Generated template for the WordsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="lv">
+    <ion-title>群文件</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+        <ion-item (click)="openFiles()"  *ngFor="let item of items">
+          <ion-thumbnail item-start>
+              <ion-icon name="folder" style="font-size:50px;color:orange;"></ion-icon>
+          </ion-thumbnail>
+          <h2>{{item.name}}</h2>
+          <span item-end class="gray">{{item.time}}</span>
+        </ion-item>
+      </ion-list>
+</ion-content>

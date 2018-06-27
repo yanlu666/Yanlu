@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="lv">
+      <ion-title class="yanxun-title">研讯</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="yanxun-content">
+  <ion-slides class="yanxun-slides">
+    <ion-slide class="yanxun-slide">
+      <span><a class="yanxun-slide-a yunlu-slide-active">考研动态</a></span>
+    </ion-slide>
+    <ion-slide class="yanxun-slide">
+      <span><a class="yanxun-slide-a">院校信息</a></span>
+    </ion-slide>
+    <ion-slide class="yanxun-slide">
+      <span><a class="yanxun-slide-a">政策新闻</a></span>
+    </ion-slide>
+    <ion-slide class="yanxun-slide">
+      <span><a class="yanxun-slide-a">院校资讯</a></span>
+    </ion-slide>
+    <ion-slide class="yanxun-slide">
+      <span><a class="yanxun-slide-a">复试</a></span>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-card class="yanxun-card" *ngFor="let item of dataArr.data;let i=index">
+
+      <ion-card-content class="yanxun-card-content" (click)="showDetails(item.title)">
+      <div class="card-content-left">
+      <h2 class="h2">{{item.title}}</h2>
+      <div class="yanxun-card-bottom-box">
+        <span class="yanxun-item-name">考研找助手</span>
+        <span class="yanxun-item-time">{{item.time}}</span>
+      </div>
+    </div>
+    <img style="width:30%;" src="./assets/imgs/yanxun{{i}}.jpg" alt="">
+    </ion-card-content>
+  </ion-card>
+</ion-content>

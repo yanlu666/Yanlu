@@ -1,0 +1,31 @@
+<!--
+  Generated template for the DatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+  <ion-navbar color='lv'>
+    <ion-title class="date-title">日历</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <p class="date-content-footer">你已成功坚持<span class="date-content-continue">1</span>天了，离成功更近异步 :)</p>
+
+  <div class="input-container">
+      <div id="test2"></div>
+  </div>
+
+  <div class="input-container-display">
+    <ol>
+      <li *ngFor="let items of dateTask">{{items.desc}}<span class="dateTaskPendding">{{items.pendding?"完成":"未完成"}}</span></li>
+    </ol>
+  </div>
+
+</ion-content>

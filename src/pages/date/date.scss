@@ -1,0 +1,50 @@
+page-date {
+
+}
+.date-title{
+  box-sizing: border-box;
+  background-color: rgb(55,206,193);
+}
+.date-title div{
+  color:white;
+}
+.back-button{
+  color:white;
+}
+.date-content-div{
+  width:100%;
+  height:300px;
+  line-height: 300px;
+  text-align: center;
+}
+.date-content-footer{
+  text-align: center;
+}
+
+.demo-input{padding-left: 10px; height: 38px; min-width: 262px; line-height: 38px; border: 1px solid #e6e6e6;  background-color: #fff;  border-radius: 2px;}
+.demo-footer{padding: 50px 0; color: #999; font-size: 14px;}
+.demo-footer a{padding: 0 5px; color: #01AAED;}
+.input-container{
+  display: flex;
+  justify-content: center;
+}
+.date-content-continue{
+  font-size: 2em;
+  color:tomato;
+}
+
+.input-container-display{
+  margin-top: 15px;
+  padding: 10px;
+  width:100%;
+  border-top: 1px solid #ccc;
+}
+.input-container-display ol{
+  margin: 0;
+}
+.dateTaskPendding{
+  color:red;
+  margin-right: 3em;
+  float:right;
+}
+

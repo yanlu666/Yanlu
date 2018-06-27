@@ -1,0 +1,44 @@
+page-talklist {
+// .talk{
+//     width: 50%;
+//     height: 40px;
+//     border: 1px solid;
+//     position: fixed;
+//     bottom: 0;
+//     display: inline-block;
+//     background: rgb(55, 206, 193);
+//     color: white;
+//     font-size: 16px;
+// }
+// .list{
+//     width: 50%;
+//     height: 40px;
+//     border: 1px solid rgb(55, 206, 193);
+//     position: fixed;
+//     bottom: 0;
+//     right: 0;
+//     font-size: 16px;
+// }
+.right{
+    float: right;
+    font-size: 14px;
+    color: #8e9093;
+}
+.warn{
+    float: right;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background: red;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+}
+.bar-button{
+  position: absolute;
+  right:0;
+  top:50%;
+  transform: translateY(-50%);
+}
+}

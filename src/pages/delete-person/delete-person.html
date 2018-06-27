@@ -1,0 +1,33 @@
+<!--
+  Generated template for the DeletePersonPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="lv">
+    <ion-title>好友信息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <div class="info">
+    <img src={{touxiang}} class="touxiang">
+    <p style="font-size:20px;">{{username}}</p>
+    <p style="color:gray">{{qianming}}</p>
+ </div>
+ <ion-item class="item1">
+  学校：<span>{{myschool}}</span>
+ </ion-item>
+  <ion-item class="item1">
+     专业：<span>{{zhuanye}}</span>
+     </ion-item>
+     <ion-item class="item1">
+     等级：<span>Level3</span>
+    </ion-item>
+         <ion-item class="item1">
+            考研年份：<span>{{year}}</span>
+           </ion-item>
+     <button ion-button style="margin-left:25px;width:85%;" class="delete" (click)="delete()">删除好友</button>
+</ion-content>

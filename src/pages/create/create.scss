@@ -1,0 +1,62 @@
+page-create {
+  .create-title{
+    background-color: rgb(55,206,193);
+  }
+  .create-title div{
+    color:white;
+  }
+  .create-content-desc{
+    font-weight: 1.5em;
+    font-weight: bold;
+  }
+  .create-content-set-alert{
+    font-size: 2rem;
+    margin-top:20px;
+  }
+  .create-content-test-defind{
+    float: right;
+    color:rgb(55,206,193);
+    text-decoration: underline;
+  }
+  .create-content-alert-more{
+    color:rgb(55,206,193);
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .create-taskuset-button,.create-taskuset-button .button-inner{
+    position: absolute;
+    right:0;
+    top:0;
+    margin:0;
+    padding:0;
+    width:1.2em;
+    height:1.3em;
+    background-color: transparent;
+  }
+  .create-taskuset-icon{
+    color:red;
+    font-size: 1.2em;
+  }
+  .taskuser-button-display{
+    display:none;
+  }
+  .test-manage{
+    margin:0 10px;
+  }
+  .div-input{
+    width:100%;
+    display:flex;
+  }
+  ion-card-content{
+    min-height: 60px;
+  }
+  .create-mybutton{
+    width:50px;
+    height:30px;
+  }
+  .create-used-font{
+    font-size: 20px;
+  }
+}
+

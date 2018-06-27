@@ -1,0 +1,107 @@
+<ion-header noborder>
+  <ion-navbar color="lv">
+    <ion-title>
+      社区
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <!-- searchbar -->
+    <ion-searchbar placeholder="搜帖子" (ionInput)="getItems($event)" style="background-color:  rgb(55,206,193);"></ion-searchbar>
+
+    <!-- 轮播图 -->
+    <ion-slides style="height:200px;">
+        <ion-slide style="background-image:url(./assets/imgs/l-2.jpg); background-size:cover;">
+        </ion-slide>
+
+        <ion-slide style="background-image:url(./assets/imgs/l-5.jpg); background-size:cover;">
+       </ion-slide>
+
+        <ion-slide style="background-image:url(./assets/imgs/l-4.jpg); background-size:cover;">
+        </ion-slide>
+
+        <ion-slide style="background-image:url(./assets/imgs/l-6.jpg); background-size:cover;">
+        </ion-slide>
+      </ion-slides>
+
+       <!-- segment -->
+       <div>
+          <ion-segment [(ngModel)]="tips" color="lv">
+            <ion-segment-button value="experience">
+              经验贴
+            </ion-segment-button>
+            <ion-segment-button value="problems">
+              提问帖
+            </ion-segment-button>
+            <ion-segment-button value="others">
+              其他贴
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+
+        <div [ngSwitch]="tips">
+            <ion-list *ngSwitchCase="'experience'">
+                <ion-item *ngFor="let item of tiezi; let i=index">
+                    <ion-card-content (click)='goTzxq(i)'>
+                      <ion-card-title>
+                          <img  src="http://www.ghost64.com/qqtupian/zixunImg/local/2017/11/08/15101101075624.jpg"  class="toux" id="img"/>
+                          <span id="user" >{{item.username}}</span>
+                          <span style="float:right; font-size:15px;" id="time">{{item.time}}</span>
+                        </ion-card-title>
+                      <p style="word-wrap: break-word; word-break: break-all;" id="content">
+                          {{ item.content }}
+                      </p>
+                    </ion-card-content>
+                        <ion-icon name='ios-redo' class="icon" color="lv" ></ion-icon>
+                        <ion-icon name="ios-text"  color="lan"></ion-icon>
+                        <ion-icon name='ios-heart' class="icon" color="hui" id={{i}} (click)="zan(i)"></ion-icon>
+                  </ion-item>
+            </ion-list>
+
+            <ion-list *ngSwitchCase="'problems'">
+                <ion-item *ngFor="let item of tiezi; let i=index">
+                    <ion-card-content (click)='goTzxq(i)'>
+                      <ion-card-title>
+                          <img  src="./assets/imgs/l-1.jpg"  class="toux" id="img"/>
+                          <span id="user">{{item.username}}</span>
+                          <span style="float:right; font-size:15px;">{{item.time}}</span>
+                        </ion-card-title>
+                      <p style="word-wrap: break-word; word-break: break-all;">
+                        {{ item.content }}
+                      </p>
+                    </ion-card-content>
+                        <ion-icon name='ios-redo' class="icon" color="lv"></ion-icon>
+                        <ion-icon name="ios-text"  color="lan"></ion-icon>
+                        <ion-icon name='ios-heart' class="icon" color="hui" id={{i}} (click)="zan(i)"></ion-icon>
+                  </ion-item>
+            </ion-list>
+
+            <ion-list *ngSwitchCase="'others'">
+                <ion-item *ngFor="let item of tiezi; let i=index">
+                    <ion-card-content (click)='goTzxq(i)'>
+                      <ion-card-title>
+                          <img  src="./assets/imgs/l-5.jpg"  class="toux" id="img"/>
+                          <span id="user">{{item.username}}</span>
+                          <span style="float:right; font-size:15px;">{{item.time}}</span>
+                        </ion-card-title>
+                      <p style="word-wrap: break-word; word-break: break-all;">
+                        {{ item.content }}
+                      </p>
+                    </ion-card-content>
+                        <ion-icon name='ios-redo' class="icon" color="lv"></ion-icon>
+                        <ion-icon name="ios-text"  color="lan"></ion-icon>
+                        <ion-icon name='ios-heart' class="icon" color="hui" id={{i}} (click)="zan(i)"></ion-icon>
+                  </ion-item>
+            </ion-list>
+          </div>
+
+
+          <!-- 添加帖子按钮 -->
+             <ion-fab right bottom>
+              <button ion-fab (click)='goEdit()' color="lv"><ion-icon name="add"></ion-icon></button>
+             </ion-fab>
+
+            <!-- <button ion-button color="secondary" (click)="goWode()">我的帖子</button> -->
+            <button ion-button color="secondary" (click)="goStart()">引导页</button>
+</ion-content>

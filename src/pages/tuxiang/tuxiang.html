@@ -1,0 +1,52 @@
+
+<ion-header>
+
+  <ion-navbar color='lv'>
+    <ion-title>团资料</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <h3 style="text-align:center;padding-top:10px;">{{hh}}</h3>
+    <ion-slides style="height: 200px;">
+
+        <ion-slide>
+            <img src="./assets/imgs/ziliaot/02.jpg" style="width:100%;">
+        </ion-slide>
+
+        <ion-slide>
+            <img src="./assets/imgs/ziliaot/04.jpg" style="width:100%;">
+        </ion-slide>
+
+        <ion-slide>
+            <img src="./assets/imgs/ziliaot/05.jpg" style="width:100%;">
+        </ion-slide>
+
+      </ion-slides>
+    <div style="padding:20px 10px 0 10px;">
+      <h3>内容介绍</h3>
+      <p>考研数学，最需要强调的是基础。很多同学不重视基础的学习，反而只是忙着做题，做难题，就想通过题海战术取胜，这是不行的，就像是不会走路的孩子总想直接跑步一样。当然，这里并不是说不用多做题，做题量也是要保证的，这点在下面会说到。
+       分析一下数学试卷就会发现，80%的题目都是基础题目，真正需要冥思苦想的偏题、难题只是少数。</p>
+      <h3>目录</h3>
+      <p>考研数学一高数知识点详细解答（一）</p>
+      <p>考研数学一高数知识点详细解答（二）</p>
+      <p>考研数学一高数知识点详细解答（三）</p>
+      <p>考研数学一高数知识点详细解答（四）</p>
+      <p>考研数学一高数知识点详细解答（五）</p>
+    </div>
+
+
+    <button ion-button color="light" round style="float:left;width:75%;height: 30px;"></button>
+    <button ion-button color="danger" round style="float:left;margin-top:-35px;width:45%;height: 30px;">55%</button>
+    <p style="float: right;margin-right:5px;color: red;margin-top: -35px;font-size: 18px;">20人已团</p>
+    <div style="width:50%;float:left;margin-top:7px;">
+        <button ion-button color='lv' outline style="width:98%">{{price}}</button>
+      </div>
+      <div style="width:50%;float:right">
+        <button ion-button color='lv' style="width:98%" (click)="showConfirm()">一键团</button>
+
+      </div>
+
+</ion-content>

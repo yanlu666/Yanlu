@@ -1,0 +1,11 @@
+page-files {
+    .gray{
+        color: gainsboro;
+    }
+    .txt{
+        width:200px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
