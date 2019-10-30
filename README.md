@@ -5,6 +5,9 @@
 
 ### 项目成员
 
+* 赵子旭 (产品经理，前端工程师，数据库管理员) 
+    * Email: <347937686@qq.com>
+    * Github : [https://github.com/201401zhaozixu](https://github.com/201401zhaozixu)
 * 王开心 (项目经理，前端工程师，数据库管理员) 
     * Email: <491045545@qq.com>
     * Github : [https://github.com/Wangkaixinlove](https://github.com/Wangkaixinlove)
